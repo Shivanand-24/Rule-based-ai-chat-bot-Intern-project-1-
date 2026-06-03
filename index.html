@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rule-Based AI Chatbot</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page-shell">
+    <header class="top-bar">
+      <div class="site-brand">
+        <div class="brand-icon">🤖</div>
+        <div>
+          <h1>Rule-Based AI Chatbot</h1>
+          <p>Smart answers from a lightweight offline assistant.</p>
+        </div>
+      </div>
+      <div class="top-actions">
+        <button id="themeToggle" class="action-button" aria-label="Toggle dark mode">Dark mode</button>
+        <button id="clearChat" class="action-button" aria-label="Clear chat history">Clear</button>
+      </div>
+    </header>
+
+    <main class="chat-area">
+      <section class="chat-card">
+        <div class="chat-header">
+          <div>
+            <span class="chat-status">Online</span>
+            <h2>Ask the rule-based bot anything</h2>
+          </div>
+          <div class="typing-indicator" id="typingIndicator" aria-live="polite">Bot is typing...</div>
+        </div>
+
+        <div class="message-wrapper" id="messageWrapper" aria-live="polite" aria-relevant="additions"></div>
+
+        <form id="messageForm" class="chat-controls">
+          <button type="button" id="voiceButton" class="voice-button" aria-label="Start voice input">🎙️</button>
+          <input
+            id="chatInput"
+            class="chat-input"
+            type="text"
+            placeholder="Type your message..."
+            autocomplete="off"
+            aria-label="Chat message input"
+          />
+          <button type="submit" class="send-button" aria-label="Send message">Send</button>
+        </form>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
